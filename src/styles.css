@@ -47,7 +47,7 @@ iframe {
 .align-repo {
   display: flex;
   padding: 10px;
-  width: 293px ;
+  width: 253px ;
   height: 133px;
   flex-direction: column;
 }
