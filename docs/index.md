@@ -27,7 +27,7 @@ You **must** declare a value for each of the following URL parameters:
 | Option | Description |
 | ------ | :---------- |
 | `user` | GitHub username that owns the repo/Username to sponsor |
-| `stars` | The star count of the repositories, for exampel if stars=10 then all repositories with stars >= 10 will appear |
+| `stars` | The star count of the repositories, for example if stars=10 then all repositories with stars >= 10 will appear |
 
 
 <iframe src="https://peterhdd.github.io/ghrepos/github-repo.html?user=peterhdd&stars=10" style="max-width: 50rem;display: inline-block;width: 100vw;height: 100vh;margin: 0;padding: 0;border: 0 none;box-sizing: border-box;overflow: hidden;" frameborder="0" scrolling="0"  title="GitHub"></iframe>
