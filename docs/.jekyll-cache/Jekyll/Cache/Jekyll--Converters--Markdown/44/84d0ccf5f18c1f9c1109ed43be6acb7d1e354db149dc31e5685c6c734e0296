@@ -1,0 +1,45 @@
+I"Â	<h2 class="no_toc" id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#showcase-your-repositories" id="markdown-toc-showcase-your-repositories">Showcase Your Repositories</a></li>
+  <li><a href="#parameters" id="markdown-toc-parameters">Parameters</a>    <ul>
+      <li><a href="#required-parameters" id="markdown-toc-required-parameters">Required parameters</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="showcase-your-repositories">Showcase Your Repositories</h2>
+
+<p>To add your repositories to your static website, just copy the below <code class="language-plaintext highlighter-rouge">iframe</code> and paste it in the location where you want the repositories to appear:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://peterhdd.github.io/ghrepos/github-repo.html?user=peterhdd&amp;stars=10"</span> <span class="na">style=</span><span class="s">"max-width: 50rem;display: inline-block;width: 100vw;height: 100vh;margin: 0;padding: 0;border: 0 none;box-sizing: border-box;overflow: hidden;"</span> <span class="na">frameborder=</span><span class="s">"0"</span> <span class="na">scrolling=</span><span class="s">"0"</span>  <span class="na">title=</span><span class="s">"GitHub"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<h2 id="parameters">Parameters</h2>
+
+<h3 id="required-parameters">Required parameters</h3>
+
+<p>You <strong>must</strong> declare a value for each of the following URL parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">user</code></td>
+      <td style="text-align: left">GitHub username that owns the repo/Username to sponsor</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">stars</code></td>
+      <td style="text-align: left">The star count of the repositories, for exampel if stars=10 then all repositories with stars &gt;= 10 will appear</td>
+    </tr>
+  </tbody>
+</table>
+
+<iframe src="https://peterhdd.github.io/ghrepos/github-repo.html?user=peterhdd&amp;stars=10" style="max-width: 50rem;display: inline-block;width: 100vw;height: 100vh;margin: 0;padding: 0;border: 0 none;box-sizing: border-box;overflow: hidden;" frameborder="0" scrolling="0" title="GitHub"></iframe>
+:ET
