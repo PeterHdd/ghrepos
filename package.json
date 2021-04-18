@@ -1,0 +1,73 @@
+{
+  "name": "github-repos",
+  "version": "1.0.0",
+  "description": "Showcase your GitHub repositories",
+  "private": true,
+  "homepage": "https://peterhdd.github.io/ghrepos",
+  "author": "Peter Haddad <peterhaddadn@gmail.com> (https://github.com/peterhdd)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterhdd/ghrepos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peterhdd/ghrepos/issues"
+  },
+  "keywords": [
+    "github",
+    "repositories",
+    "iframe",
+    "html"
+  ],
+  "scripts": {
+    "start": "npm-run-all --parallel build docs-serve watch",
+    "docs-build": "bundle exec jekyll build",
+    "docs-serve": "bundle exec jekyll serve",
+    "build": "inline-source --compress false --root src src/repo.html | html-minifier --config-file html-minifier.json -o docs/github-repo.html",
+    "dist": "npm run build",
+    "stylelint": "stylelint \"**/*.{css,scss}\" --ignore-path .gitignore",
+    "lockfile-lint": "lockfile-lint --allowed-hosts npm --allowed-schemes https: --empty-hostname false --type npm --path package-lock.json",
+    "lint": "npm-run-all --continue-on-error --parallel lockfile-lint stylelint xo",
+    "xo": "xo",
+    "test": "npm-run-all lint build docs-build",
+    "watch": "npm-run-all --parallel watch-*",
+    "watch-css": "chokidar \"{src,docs/_sass}/**/*.{css,scss}\" --initial --command \"npm run stylelint\"",
+    "watch-js": "chokidar \"src/*.js\" --initial --command \"npm run xo\"",
+    "watch-main": "chokidar src/ --initial --command \"npm run build\""
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "html-minifier": "^4.0.0",
+    "inline-source-cli": "^2.0.0",
+    "lockfile-lint": "^4.6.2",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^13.12.0",
+    "stylelint-config-twbs-bootstrap": "^2.1.0",
+    "xo": "^0.38.2"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 3,
+      "sourceType": "script"
+    },
+    "esnext": false,
+    "space": true,
+    "rules": {
+      "capitalized-comments": "off",
+      "default-case": "off",
+      "no-negated-condition": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "spaced-comment": "off",
+      "unicorn/prevent-abbreviations": "off"
+    }
+  }
+}

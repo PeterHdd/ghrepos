@@ -1,0 +1,21 @@
+title:          "Showcase Your Repositories"
+description:    "Showcase your repositories in your static site!"
+url:            "https://peterhdd.github.io/ghrepos"
+
+# Social
+author:
+  name:         "Peter Haddad"
+
+twitter:
+  username:     "peterndev"
+
+permalink:      pretty
+
+sass:
+  style:        compressed
+
+source:         docs
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

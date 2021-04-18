@@ -1,0 +1,20 @@
+{%- comment -%}
+  Usage: include example.html content=markup [args],
+  where content is a capture with the HTML content
+
+  args can be one of the following:
+    id - null (default)
+    class - "example" (default)
+{%- endcomment -%}
+
+{%- assign id = include.id -%}
+{%- assign class = include.class -%}
+
+<div{% if id %} id="{{ id }}"{% endif %} class="example{% if class %} {{ class }}{% endif %}">
+  {%- assign url = site.url | append: '/' -%}
+  {{- include.content | replace: url, '' | replace: ' frameborder="0" scrolling="0"' '' -}}
+</div>
+
+{%- highlight html -%}
+  {{- include.content -}}
+{%- endhighlight -%}

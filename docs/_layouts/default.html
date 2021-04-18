@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="dns-prefetch" href="https://api.github.com">
+
+    {% seo %}
+    <style>
+    {%- capture include_to_scssify -%}
+      {%- include page.scss -%}
+    {%- endcapture -%}
+    {{- include_to_scssify | scssify -}}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="tweet-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-via="mdo">Tweet</a>
+      </div>
+
+      <h1>GitHub Repositories</h1>
+      <p>Showcase your GitHub repositories with linkable GitHub star, fork, repo name.</p>
+      <p>Made by <a href="https://twitter.com/peterndev">@peterndev</a>. Available on <a href="https://github.com/peterhdd/ghrepos">GitHub</a>. Licensed <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2</a>.</p>
+
+      <hr>
+
+      {{ content }}
+    </div>
+
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+  </body>
+</html>
