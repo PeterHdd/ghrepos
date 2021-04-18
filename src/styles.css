@@ -7,7 +7,7 @@ body {
   line-height: 14px;
 }
 .style-list {
-  margin: 0;
+  margin-top: 10px;
   padding: 0;
   list-style-type: none;
   display: inline-block;
@@ -46,7 +46,7 @@ iframe {
 
 .align-repo {
   display: flex;
-  padding: 14px;
+  padding: 10px;
   width: 293px ;
   height: 133px;
   flex-direction: column;
@@ -54,7 +54,7 @@ iframe {
 
 .align-items {
   display: inline-block;
-  margin:20px ;
+  margin:10px ;
   border: 1px solid #e1e4e8;
   border-radius: 6px;
   height: 133px;
